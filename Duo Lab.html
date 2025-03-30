@@ -1,0 +1,152 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Inventory Management System
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100">
+  <div class="container mx-auto p-4">
+   <div class="flex justify-between items-center mb-4">
+    <div class="flex items-center space-x-2">
+     <img alt="Company Logo" class="w-12 h-12" height="50" src="https://storage.googleapis.com/a1aa/image/v301hxQkaFY0ntijQjCDh-30YzhHVxgtmGMCCzIgdHw.jpg" width="50"/>
+     <h1 class="text-2xl font-bold text-blue-600">
+      Inventory Management System
+     </h1>
+    </div>
+    <div class="flex items-center space-x-2">
+     <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+      + Add New Item
+     </button>
+     <div class="relative">
+      <input class="border rounded px-4 py-2" placeholder="Search Items..." type="text"/>
+      <button class="absolute right-0 top-0 mt-2 mr-2 text-blue-500">
+       <i class="fas fa-search">
+       </i>
+      </button>
+     </div>
+    </div>
+   </div>
+   <div class="bg-white p-4 rounded shadow">
+    <h2 class="text-xl font-bold mb-4">
+     Current Inventory
+    </h2>
+    <div class="flex justify-between items-center mb-4">
+     <div class="flex space-x-2">
+      <label class="font-semibold" for="searchBy">
+       Search By:
+      </label>
+      <select class="border rounded px-2 py-1" id="searchBy">
+       <option>
+        Product Name
+       </option>
+      </select>
+     </div>
+     <div class="flex space-x-2">
+      <label class="font-semibold" for="sortBy">
+       Sort By:
+      </label>
+      <select class="border rounded px-2 py-1" id="sortBy">
+       <option>
+        Price (Low to High)
+       </option>
+      </select>
+     </div>
+    </div>
+    <table class="min-w-full bg-white">
+     <thead>
+      <tr>
+       <th class="py-2 px-4 border-b">
+        Image
+       </th>
+       <th class="py-2 px-4 border-b">
+        Product Name
+       </th>
+       <th class="py-2 px-4 border-b">
+        Details
+       </th>
+       <th class="py-2 px-4 border-b">
+        Quantity
+       </th>
+       <th class="py-2 px-4 border-b">
+        Price
+       </th>
+       <th class="py-2 px-4 border-b">
+        Date Added
+       </th>
+       <th class="py-2 px-4 border-b">
+        Actions
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="py-2 px-4 border-b">
+        <img alt="Product Image 1" class="w-12 h-12" height="50" src="https://storage.googleapis.com/a1aa/image/wCdA8ugMMS_Biv26pWHXWnEpF4I8-xWXodxzLZb_S-k.jpg" width="50"/>
+       </td>
+       <td class="py-2 px-4 border-b">
+        Item 1
+       </td>
+       <td class="py-2 px-4 border-b">
+        This is Item 1
+       </td>
+       <td class="py-2 px-4 border-b">
+        3
+       </td>
+       <td class="py-2 px-4 border-b">
+        $20.00
+       </td>
+       <td class="py-2 px-4 border-b">
+        3/26/2025
+       </td>
+       <td class="py-2 px-4 border-b">
+        <button class="text-blue-500 hover:text-blue-700">
+         <i class="fas fa-edit">
+         </i>
+        </button>
+        <button class="text-red-500 hover:text-red-700 ml-2">
+         <i class="fas fa-trash">
+         </i>
+        </button>
+       </td>
+      </tr>
+      <tr>
+       <td class="py-2 px-4 border-b">
+        <img alt="Product Image 2" class="w-12 h-12" height="50" src="https://storage.googleapis.com/a1aa/image/E4ZFybHc_73tm6CcbfDfjoH0IM3bJlF9kEaTmJCx7W8.jpg" width="50"/>
+       </td>
+       <td class="py-2 px-4 border-b">
+        Item 2
+       </td>
+       <td class="py-2 px-4 border-b">
+        This is Item 2
+       </td>
+       <td class="py-2 px-4 border-b">
+        100
+       </td>
+       <td class="py-2 px-4 border-b">
+        $50.00
+       </td>
+       <td class="py-2 px-4 border-b">
+        3/28/2025
+       </td>
+       <td class="py-2 px-4 border-b">
+        <button class="text-blue-500 hover:text-blue-700">
+         <i class="fas fa-edit">
+         </i>
+        </button>
+        <button class="text-red-500 hover:text-red-700 ml-2">
+         <i class="fas fa-trash">
+         </i>
+        </button>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </body>
+</html>
