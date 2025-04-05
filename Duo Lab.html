@@ -1,70 +1,46 @@
-<html lang="en">
+<!DOCTYPE html lang="en">
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Inventory Management System
+   Home Page
   </title>
-  <script src="https://cdn.tailwindcss.com">
   </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
  </head>
- <body class="bg-gray-100">
-  <div class="container mx-auto p-4">
-   <div class="flex justify-between items-center mb-4">
-    <div class="flex items-center space-x-2">
-     <img alt="Company Logo" class="w-12 h-12" height="50" src="https://storage.googleapis.com/a1aa/image/v301hxQkaFY0ntijQjCDh-30YzhHVxgtmGMCCzIgdHw.jpg" width="50"/>
-     <h1 class="text-2xl font-bold text-blue-600">
-      Inventory Management System
-     </h1>
+    <img alt="Company Logo" class="mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/nYHUS_Gth30pqVuw6Pt7iLrC422eu6ALP4e8NGVUuO0.jpg" width="100"/>
+    <h1>
+     Inventory Management System
+    </h1>
+   </div>
+   <div style="flex: items-center mb-4">
+    <input style="border: p-2 rounded w-full" placeholder="Search..." type="text"/>
+   </div>
+   <div style="flex: items-center mb-4">
+    <div>
+     <input style id="type" type="checkbox"/>
+     <label for="type">
+      Type of Item
+     </label>
     </div>
-    <div class="flex items-center space-x-2">
-     <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
-      + Add New Item
-     </button>
-     <div class="relative">
-      <input class="border rounded px-4 py-2" placeholder="Search Items..." type="text"/>
-      <button class="absolute right-0 top-0 mt-2 mr-2 text-blue-500">
-       <i class="fas fa-search">
-       </i>
-      </button>
-     </div>
+    <div>
+     <input checked="" style id="price" type="checkbox"/>
+     <label for="price">
+      Price
+     </label>
+    </div>
+    <div>
+     <input style id="quantity" type="checkbox"/>
+     <label for="quantity">
+      Quantity
+     </label>
     </div>
    </div>
-   <div class="bg-white p-4 rounded shadow">
-    <h2 class="text-xl font-bold mb-4">
-     Current Inventory
-    </h2>
-    <div class="flex justify-between items-center mb-4">
-     <div class="flex space-x-2">
-      <label class="font-semibold" for="searchBy">
-       Search By:
-      </label>
-      <select class="border rounded px-2 py-1" id="searchBy">
-       <option>
-        Product Name
-       </option>
-      </select>
-     </div>
-     <div class="flex space-x-2">
-      <label class="font-semibold" for="sortBy">
-       Sort By:
-      </label>
-      <select class="border rounded px-2 py-1" id="sortBy">
-       <option>
-        Price (Low to High)
-       </option>
-      </select>
-     </div>
-    </div>
+   <div class="bg-white shadow-md rounded-lg overflow-hidden">
     <table class="min-w-full bg-white">
      <thead>
       <tr>
        <th class="py-2 px-4 border-b">
-        Image
-       </th>
-       <th class="py-2 px-4 border-b">
-        Product Name
+        Name
        </th>
        <th class="py-2 px-4 border-b">
         Details
@@ -76,77 +52,149 @@
         Price
        </th>
        <th class="py-2 px-4 border-b">
-        Date Added
+        Date
        </th>
        <th class="py-2 px-4 border-b">
-        Actions
+        Remove/Edit
        </th>
       </tr>
      </thead>
-     <tbody>
+     <tbody id="productTableBody">
       <tr>
        <td class="py-2 px-4 border-b">
-        <img alt="Product Image 1" class="w-12 h-12" height="50" src="https://storage.googleapis.com/a1aa/image/wCdA8ugMMS_Biv26pWHXWnEpF4I8-xWXodxzLZb_S-k.jpg" width="50"/>
+        Product 1
        </td>
        <td class="py-2 px-4 border-b">
-        Item 1
+        Details 1
        </td>
        <td class="py-2 px-4 border-b">
-        This is Item 1
+        10
        </td>
        <td class="py-2 px-4 border-b">
-        3
+        $100
        </td>
        <td class="py-2 px-4 border-b">
-        $20.00
+        2023-10-01
        </td>
        <td class="py-2 px-4 border-b">
-        3/26/2025
-       </td>
-       <td class="py-2 px-4 border-b">
-        <button class="text-blue-500 hover:text-blue-700">
-         <i class="fas fa-edit">
-         </i>
+        <button class="text-red-500 mr-2">
+         Remove
         </button>
-        <button class="text-red-500 hover:text-red-700 ml-2">
-         <i class="fas fa-trash">
-         </i>
-        </button>
-       </td>
-      </tr>
-      <tr>
-       <td class="py-2 px-4 border-b">
-        <img alt="Product Image 2" class="w-12 h-12" height="50" src="https://storage.googleapis.com/a1aa/image/E4ZFybHc_73tm6CcbfDfjoH0IM3bJlF9kEaTmJCx7W8.jpg" width="50"/>
-       </td>
-       <td class="py-2 px-4 border-b">
-        Item 2
-       </td>
-       <td class="py-2 px-4 border-b">
-        This is Item 2
-       </td>
-       <td class="py-2 px-4 border-b">
-        100
-       </td>
-       <td class="py-2 px-4 border-b">
-        $50.00
-       </td>
-       <td class="py-2 px-4 border-b">
-        3/28/2025
-       </td>
-       <td class="py-2 px-4 border-b">
-        <button class="text-blue-500 hover:text-blue-700">
-         <i class="fas fa-edit">
-         </i>
-        </button>
-        <button class="text-red-500 hover:text-red-700 ml-2">
-         <i class="fas fa-trash">
-         </i>
+        <button class="text-blue-500" onclick>
+         Edit
         </button>
        </td>
       </tr>
      </tbody>
     </table>
    </div>
+   <div class="mt-4">
+    <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="openModal()">
+     Add Item
+    </button>
+   </div>
+   <div class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center" id="createItemModal">
+    <div class="bg-white shadow-md rounded-lg p-4 w-1/2">
+     <h2 class="text-xl mb-4">
+      Create Item
+     </h2>
+     <form id="createItemForm">
+      <div class="mb-4">
+       <label class="block mb-2" for="name">
+        Name
+       </label>
+       <input class="border p-2 rounded w-full" id="name" type="text"/>
+      </div>
+      <div class="mb-4">
+       <label class="block mb-2" for="details">
+        Details
+       </label>
+       <input class="border p-2 rounded w-full" id="details" type="text"/>
+      </div>
+      <div class="mb-4">
+       <label class="block mb-2" for="quantity">
+        Quantity
+       </label>
+       <input class="border p-2 rounded w-full" id="quantity" type="number"/>
+      </div>
+      <div class="mb-4">
+       <label class="block mb-2" for="price">
+        Price
+       </label>
+       <input class="border p-2 rounded w-full" id="price" type="number"/>
+      </div>
+      <div class="mb-4">
+       <label class="block mb-2" for="date">
+        Date
+       </label>
+       <input class="border p-2 rounded w-full" id="date" type="date"/>
+      </div>
+      <div class="mb-4">
+       <label class="block mb-2" for="type">
+        Type
+       </label>
+       <select class="border p-2 rounded w-full" id="type">
+        <option value="type1">
+         Type 1
+        </option>
+        <option value="type2">
+         Type 2
+        </option>
+       </select>
+      </div>
+      <div class="mb-4">
+       <label class="block mb-2" for="image">
+        Image
+       </label>
+       <input class="border p-2 rounded w-full" id="image" type="file"/>
+      </div>
+      <div class="flex justify-end">
+       <button class="bg-blue-500 text-white px-4 py-2 rounded mr-2" onclick="addItem()" type="button">
+        Add
+       </button>
+       <button class="bg-gray-500 text-white px-4 py-2 rounded" onclick="closeModal()" type="button">
+        Cancel
+       </button>
+      </div>
+     </form>
+    </div>
+   </div>
   </div>
+  <script>
+   function openModal() {
+            document.getElementById('createItemModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('createItemModal').classList.add('hidden');
+        }
+
+        function addItem() {
+            const name = document.getElementById('name').value;
+            const details = document.getElementById('details').value;
+            const quantity = document.getElementById('quantity').value;
+            const price = document.getElementById('price').value;
+            const date = document.getElementById('date').value;
+            const type = document.getElementById('type').value;
+
+            const tableBody = document.getElementById('productTableBody');
+            const newRow = document.createElement('tr');
+
+            newRow.innerHTML = `
+                <td class="py-2 px-4 border-b">${name}</td>
+                <td class="py-2 px-4 border-b">${details}</td>
+                <td class="py-2 px-4 border-b">${quantity}</td>
+                <td class="py-2 px-4 border-b">$${price}</td>
+                <td class="py-2 px-4 border-b">${date}</td>
+                <td class="py-2 px-4 border-b">
+                    <button class="text-red-500 mr-2">Remove</button>
+                    <button class="text-blue-500">Edit</button>
+                </td>
+            `;
+
+            tableBody.appendChild(newRow);
+            closeModal();
+        }
+  </script>
  </body>
 </html>
